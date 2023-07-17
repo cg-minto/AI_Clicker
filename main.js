@@ -1,5 +1,5 @@
 //vars
-var money = 7000; 
+var money = 0; 
 var click = 1; 
 dps = 0 
 
