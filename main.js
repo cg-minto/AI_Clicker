@@ -1,10 +1,10 @@
 //vars
-var money = 50000;  
+var money = 0;  
 var click = 1; 
 dps = 0 
 
 function update(){
-    dps = ports*1 + lans*10 + router*100
+    dps = ports*1 + lans*10 + router*100 + sw*1000 + sat*10000
     money += dps; 
     document.getElementById("_ps").innerHTML = "🧠 per second : " + dps;   
     document.getElementById("c").innerHTML = " 🧠 " + money; 
@@ -104,26 +104,34 @@ function openRouter(){
         router++; 
         rtPrice += 200; 
         document.getElementById("rt").innerHTML = "Cloud Network(" + router + "): 🧠 " + rtPrice;
+        document.getElementById("sw").classList = "button"
     }
 }
 
-function promotePort(){
-    if (ports >= 10){
-        ports -= 10; 
-        lans++; 
-        document.getElementById("op").innerHTML = "Disk Drives(" + ports + "): 🧠 " + opPrice;
-        document.getElementById("ln").innerHTML = "Small Servers(" + lans + "): 🧠 " + lnPrice;
+var sw=0;
+var swPrice=25000
+function buySW(){
+    if(money>=swPrice){
+        money-=swPrice;
+        document.getElementById("c").innerHTML = " 🧠 " + money; 
+        sw++; 
+        swPrice+=2500
+        document.getElementById("sw").innerHTML = "Server Warehouse(" + sw + "): 🧠 " + swPrice;
+        document.getElementById("sat").classList = "button"
     }
 }
 
-function promoteLAN(){
-    if (lans >= 10){
-        lans -= 10; 
-        router++; 
-        document.getElementById("ln").innerHTML = "Small Servers(" + lans + "): 🧠 " + lnPrice;
-        document.getElementById("rt").innerHTML = "Cloud Network(" + router + "): 🧠 " + rtPrice;
+var sat=0;
+var satPrice=100000
+function buySat(){
+    if(money>=satPrice){
+        money-=satPrice;
+        document.getElementById("c").innerHTML = " 🧠 " + money; 
+        sat++; 
+        satPrice+=50000
+        document.getElementById("sat").innerHTML = "Low Orbit Satellite(" + sat + "): 🧠 " + satPrice;
+
     }
 }
-
 
 update(); 
