@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artificial Intelligence Clicker</title>
+    <link rel="stylesheet" href="index.css"> 
+</head>
+
+<style>
+    body{color: aqua; background-color:dimgray; font-family: 'Courier New', Courier, monospace; text-align: center;margin-top: 75px;}
+    .p2{font-size:48px;}
+    .spacing{line-height: 0.1;}
+    .button {
+    background-color:darkslategray; 
+    color:aqua;
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    cursor:pointer;
+    }
+    .button:hover {
+    background-color: black;
+    color: greenyellow;
+    }
+    .cButton{font-size: 24px;}
+
+</style>
+
+
+
+<body>
+    <div class="spacing">
+    <p class="p2" id="c">🧠 0</p>
+    <p id="_ps">🧠 per second : 0</p>
+    </div>
+
+    <br>
+
+    <button class="button cButton" onclick="add()">Train</button>
+    <h1></h1>
+    <h> Upgrades</h>
+    <button class="button" onclick="upgradeClick()" id="upgrade">Upgrade Datasets(1): 🧠 10</button>
+    <button class="button" onclick="upIt()" id="it">Internet Access(0): 🧠 7000</button>
+    <h1></h1>
+    <h>Devices</h>
+    <button class="button" onclick="openPort()" id="op">Disk Drives(0): 🧠 50</button>
+    <button class="button" onclick="openLAN()" id="ln">Small Servers(0): 🧠 200</button>
+    <button class="button" onclick="openRouter()" id="rt">Cloud Network(0): 🧠 2500</button>
+    <h1></h1>
+
+    
+</body>
+
+
+<script src="main.js"> </script>
+</html>
