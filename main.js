@@ -1,5 +1,5 @@
 //vars
-var money = 0; 
+var money = 50000;  
 var click = 1; 
 dps = 0 
 
@@ -39,11 +39,28 @@ function upIt(){
         money -=itPrice;
         document.getElementById("c").innerHTML = " 🧠 " + money; 
         click += 500
-        it+=500
+        it+=1
         
         itPrice += 2000
         document.getElementById("it").innerHTML = "Internet Access("+it+"): 🧠 "+itPrice
+        document.getElementById("pd").classList = "button"
     }
+}
+
+var pd=0
+var pdPrice = 50000; 
+function upPd(){
+    if(money>=pdPrice){
+        money-=pdPrice
+        document.getElementById("c").innerHTML = " 🧠 " + money; 
+        click +=10000
+        pd++; 
+
+        pdPrice += 10000
+        document.getElementById("pd").innerHTML = "Personal Data("+pd+"): 🧠 "+pdPrice
+
+    }
+
 }
 
 var opPrice = 50

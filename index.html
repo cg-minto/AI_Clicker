@@ -25,6 +25,8 @@
     color: greenyellow;
     }
     .cButton{font-size: 24px;}
+    .hiddenbutton{visibility: hidden;width: 0px;height: 0px;}
+    
 
 </style>
 
@@ -43,6 +45,7 @@
     <h> Upgrades</h>
     <button class="button" onclick="upgradeClick()" id="upgrade">Upgrade Datasets(1): 🧠 10</button>
     <button class="button" onclick="upIt()" id="it">Internet Access(0): 🧠 7000</button>
+    <button class="button hiddenbutton" onclick="upPd()" id="pd">Personal Data(0): 🧠 50000</button>
     <h1></h1>
     <h>Devices</h>
     <button class="button" onclick="openPort()" id="op">Disk Drives(0): 🧠 50</button>
